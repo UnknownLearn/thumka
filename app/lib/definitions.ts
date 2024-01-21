@@ -86,3 +86,11 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+export type Person={
+  id:string;
+  name:string;
+  wifeName:string[];
+  parentId?:string;
+  generation:number;
+}

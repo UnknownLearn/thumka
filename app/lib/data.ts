@@ -7,6 +7,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  Person
 } from './definitions';
 import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from 'next/cache';
@@ -237,3 +238,47 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+
+export const persons: Person[] = [
+  {
+    id: "1",
+    name: "BashuDev Mainali",
+    wifeName: ["Jane"],
+    generation: 1,
+  },
+  {
+    id: "2",
+    name: "DandaPani Mainali",
+    wifeName: ["Bob"],
+    parentId: "1",
+    generation: 2,
+  },
+  {
+    id: "3",
+    name: "KrishnaLal Mainali",
+    wifeName: ["Alice"],
+    parentId: "2",
+    generation: 3,
+  },
+  {
+    id: "4",
+    name: "ShivNarayan",
+    wifeName: ["Adam"],
+    parentId: "3",
+    generation:4 ,
+  },
+  {
+    id: "5",
+    name: "SadhuRam",
+    wifeName: ["Eva"],
+    parentId: "3",
+    generation: 4,
+  },
+  {
+    id: "6",
+    name: "ShibuRam",
+    wifeName: ["Eva"],
+    parentId: "3",
+    generation: 4,
+  },
+];
